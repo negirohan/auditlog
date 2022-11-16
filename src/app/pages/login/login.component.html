@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div class="card login-card">
+        <div class="card-header">
+            <h3>Login</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="userName" class="form-label">Login Id</label>
+                <input type="text" #userName class="form-control" id="userName">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" #password class="form-control" id="password">
+            </div>
+            <div class="mb-3" *ngIf="recaptchaKey">
+                <audit-recaptcha [recaptchaSiteKey]="recaptchaKey" (captchaResponseEvent)="onCaptchaResponse($event)"></audit-recaptcha>
+            </div>
+            <button class="btn btn-primary d-md-block fs-4" [disabled]="!isRecaptchaChecked" (click)="submit()">Login</button>
+        </div>
+    </div>
+</div>

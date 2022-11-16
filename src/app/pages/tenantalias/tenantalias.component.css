@@ -1,0 +1,10 @@
+.tenant-alias-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.tenant-alias-card {
+    width: 25rem;
+}
